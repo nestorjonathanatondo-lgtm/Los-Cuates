@@ -1,0 +1,63 @@
+name: Build APK - LosCuates
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+
+      - name: Build web (if script exists)
+        run: |
+          if npm run | grep -q "build"; then
+            npm run build
+          else
+            echo "No build script, usando carpeta raiz"
+          fi
+
+      - name: Setup Android platform
+        run: |
+          # Si el proyecto es solo HTML, usamos www como webDir
+          # Si tienes dist/ o build/, Capacitor lo detectará por capacitor.config.json
+          npx cap add android || true
+          npx cap sync android || true
+
+      - name: Make gradlew executable
+        run: chmod +x android/gradlew
+
+      - name: Build Debug APK
+        run: |
+          cd android
+          ./gradlew assembleDebug --stacktrace
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: LosCuates-debug-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
