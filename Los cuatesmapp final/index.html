@@ -46,7 +46,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--marfil);positio
 <img class="logo" src="los_cuates_logo.webp" alt="Los Cuates">
 <div class="brand">LOS CUATES</div>
 <div class="sub">Tamales en Hoja de Plátano — Saltillo</div>
-<div class="addr">Calle Chihuahua con Candela, República Poniente, Saltillo<br>WhatsApp 844-225-2582</div>
+<div class="addr">Calle Chihuahua esquina con Candela, Col. República Poniente, Saltillo<br>WhatsApp 844-225-2582</div>
 <div class="badge-wa">Pedidos al WhatsApp 844-225-2582</div>
 </div>
 
@@ -55,8 +55,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--marfil);positio
 <div style="font-size:11px;color:#7D7768;margin-top:4px">Toca el mapa o usa el botón para fijar tu ubicación. El puesto está fijo en República Poniente.</div>
 <div id="map"></div>
 <button class="btn btn-outline" style="margin-top:10px" onclick="fijarCliente()">📍 Fijar mi ubicación (cliente)</button>
-<div id="locInfo" style="font-size:10px;color:#9A8F7A;margin-top:8px">Puesto fijo: 25.436413, -100.998999 • Chihuahua con Candela</div>
-<button class="btn btn-outline" style="margin-top:8px" onclick="ruta()">🧭 Ver ruta hacia el puesto</button>
+<div id="locInfo" style="font-size:10px;color:#9A8F7A;margin-top:8px">Puesto fijo: 25.436340, -100.998381 • Chihuahua con Candela</div>
+<button class="btn btn-outline" style="margin-top:8px" onclick="ruta()"> Ver ruta hacia el puesto</button>
 </div>
 
 <div class="card">
@@ -82,7 +82,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--marfil);positio
 
 <div class="card">
 <div class="card-title" style="font-size:22px">Descarga la App</div>
-<div style="font-size:11px;color:#7D7768;margin-top:4px">Comparte este QR para que tus clientes obtengan la aplicación al instante</div>
+<div style="font-size:11px;color:#7D7768;margin-top:4px"></div>
 <div class="qr-box">
 <img id="qrAppImg" src="" style="width:200px;height:200px">
 <div style="font-size:11px;font-weight:700;margin-top:8px;color:var(--azul)">LOS CUATES - Instalar App</div>
@@ -100,7 +100,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--marfil);positio
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}
-const sabores=[{id:1,nombre:'Queso',desc:'Rajas con Oaxaca fundido',precio:35},{id:2,nombre:'Verde de Pollo',desc:'Pollo en salsa verde tatemada',precio:35},{id:3,nombre:'Rojo de Puerco',desc:'Puerco en chile guajillo',precio:35}];
+const sabores=[{id:1,nombre:'Queso',desc:precio:35},{id:2,nombre:'Verde de Pollo',desc: precio:35},{id:3,nombre:'Rojo de Puerco',desc: precio:35}];
 let cart={},rest={lat:25.436413,lng:-100.998999},cust=null,map,rMarker,cMarker;
 function showModal(t){document.getElementById('modalText').innerText=t;document.getElementById('modal').style.display='flex';}
 function renderMenu(){document.getElementById('menu').innerHTML=sabores.map(s=>`<div class="menu-item"><div><div class="menu-name">${s.nombre}</div><div style="font-size:11px;color:#7D7768">${s.desc}</div><div class="qty"><button onclick="chg(${s.id},-1)">−</button><span id="q${s.id}">${cart[s.id]||0}</span><button onclick="chg(${s.id},1)">+</button></div></div><div class="price">$35</div></div>`).join('');}
