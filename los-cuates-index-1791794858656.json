@@ -1,0 +1,91 @@
+{
+  "config": {
+    "titulo": "Tamales en hoja de plátano",
+    "subtitulo": "Nixtamal, hoja y manteca. sin atajos. Arma tu pedido aquí, directo del puesto.",
+    "bullets": [
+      "Nixtamalizado 12h en casa",
+      "Hoja de plátano fresca",
+      "Manteca de cerdo limpia",
+      "Salsas molcajeteadas hoy"
+    ],
+    "horario": "Lunes a sábado 07:00-12:00",
+    "clabe": "012 180 0158 9876 5432",
+    "telefono": "81 1234 5678",
+    "folioTexto": "Folio automático CUATES-6665",
+    "lealtadTexto": "Lealtad 10 sellos = 1 tamal gratis",
+    "stockTexto": "Stock por fecha HOY controlado",
+    "envioTexto": "Envío $25/km",
+    "qrTitulo": "QR del puesto • Lealtad",
+    "qrBadge": "10 sellos",
+    "qrLeer": "QR LEER\nCUATES",
+    "qrFolioPlaceholder": "Folio manual CUATES-6665",
+    "qrBoton": "Validar folio manual",
+    "qrAyuda": "Escanea QR en puesto o ingresa folio de ticket JPG",
+    "pedidosTitulo": "Pedidos recientes",
+    "pedidosVacio": "Aún no hay pedidos hoy. Sé el primero.",
+    "armaTitulo": "Arma tu pedido aquí, directo del puesto.",
+    "datosTitulo": "Datos de entrega",
+    "labelNombre": "Nombre completo",
+    "labelTel": "Tel WhatsApp",
+    "labelFecha": "Fecha entrega (máx 7 días)",
+    "labelHora": "Hora entrega 07:00-12:00",
+    "labelDireccion": "Dirección calle, número, colonia",
+    "labelIndicaciones": "Indicaciones: portón negro, timbre, etc.",
+    "footerNombre": "Los Cuates Tamales",
+    "footerPuestoFijo": "Puesto fijo",
+    "footerTitulo": "Los Cuates Tamales • Puesto fijo",
+    "footerSub": "Nixtamal, hoja y manteca. Sin atajos.",
+    "footerHorario": "Lunes a sábado 07:00-12:00",
+    "footerJM": "JM Design © 2026",
+    "footerJMTexto": "JM Design © 2026",
+    "footerSlogan": "Nixtamal, hoja y manteca. Sin atajos.",
+    "costoKm": 25,
+    "costoMin": 0,
+    "costoMax": 150,
+    "kmGratis": 0.5,
+    "puestoLat": 25.436368,
+    "puestoLng": -100.99837,
+    "pagoAviso": "A domicilio preferente con tarjeta. Efectivo solo para clientes frecuentes",
+    "pagoFrecuenteLabel": "¿Cliente frecuente? ☑️ Sí"
+  },
+  "productos": [
+    {
+      "id": "queso",
+      "nombre": "Queso",
+      "precio": 40,
+      "stock": 30,
+      "tipo": "tamal",
+      "desc": "Oaxaca fundido, rajas tatemadas — nixtamal 12h",
+      "badge": ""
+    },
+    {
+      "id": "verde",
+      "nombre": "Verde pollo",
+      "precio": 40,
+      "stock": 30,
+      "tipo": "tamal",
+      "desc": "Salsa molcajeteada tomatillo hoy — pollo deshebrado",
+      "badge": ""
+    },
+    {
+      "id": "rojo",
+      "nombre": "Rojo puerco",
+      "precio": 40,
+      "stock": 30,
+      "tipo": "tamal",
+      "desc": "Chile ancho, puerco deshebrado — hoja fresca",
+      "badge": ""
+    },
+    {
+      "id": "champ",
+      "nombre": "Champurrado cacao",
+      "precio": 25,
+      "stock": 30,
+      "tipo": "bebida",
+      "desc": "Cacao 70%, canela, espeso extra",
+      "badge": "Extra espeso"
+    }
+  ],
+  "generatedAt": "2026-10-12T08:47:38.647Z",
+  "version": "los-cuates-v6-fix-final"
+}
