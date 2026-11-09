@@ -43,8 +43,8 @@
     "costoMin": 25,
     "puestoLat": 25.436368,
     "puestoLng": -100.99837,
-    "pagoAviso":
-    "pagoFrecuenteLabel":
+    "pagoAviso": "",
+    "pagoFrecuenteLabel": ""
   },
   "productos": [
     {
